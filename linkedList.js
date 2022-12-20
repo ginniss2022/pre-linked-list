@@ -40,7 +40,12 @@ class LinkedList {
     }
     
     removeHead() { 
-        // remove the first Node in the LinkedList and returns its data
+       let removedHead = this.head
+       if(!removedHead){
+          return 
+       }else{
+           this.head = removedHead.nextNode
+       }
     }
 
     contains(data){ 
