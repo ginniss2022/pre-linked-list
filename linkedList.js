@@ -5,6 +5,12 @@ class Node {
         this.data = data;
         this.next = null
     }
+    setNextNode(node){
+        this.next = node
+    }
+    get nextNode(){
+        return this.next
+    }
 }
 
 class LinkedList {
@@ -13,11 +19,24 @@ class LinkedList {
     }
     
     appendToTail(data){ 
-        // add new Node with data to tail
+        let tail = this.head
+        if(!tail){
+            this.head = new Node(data)
+        }else{
+            while(tail.nextNode !== null){
+                tail = tail.nextNode
+            }
+            tail.setNextNode(new Node(data))
+        }
     }
 
     prependToHead(data){ 
-        // add new Node with data to head   
+        let newHead = new Node(data);
+        let currentHead = this.head;
+        this.head = newHead
+        if(currentHead){
+            this.head.setNextNode(currentHead)
+        }
     }
     
     removeHead() { 
