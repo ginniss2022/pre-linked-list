@@ -73,7 +73,14 @@ class LinkedList {
 
 // Question 2: Cycle Check
 const isCyclic = (headNode) => { 
-    //returns true is the list has a cycle, false otherwise
+   let currentNode = this.head
+        while(currentNode){
+            if (currentNode === headNode){
+                return true 
+            }
+            currentNode = currentNode.nextNode
+        }
+        return false
 };
 
 // Question 3: Reverse a Linked List
