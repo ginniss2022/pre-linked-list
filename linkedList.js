@@ -51,12 +51,13 @@ class LinkedList {
  // returns true is any Node in the LinkedList contains the value data, false otherwise
     contains(data){ 
        let currentNode = this.head
-        if(currentNode){
-            while(currentNode.data != data){
-                currentNode = currentNode.nextNode
+        while(currentNode){
+            if (currentNode.data === data){
+                return true 
             }
-            return currentNode.data === data ? true : false
+            currentNode = currentNode.nextNode
         }
+        return false
     }
 
     length(){ 
