@@ -73,7 +73,7 @@ class LinkedList {
 
 // Question 2: Cycle Check
 const isCyclic = (headNode) => { 
-   let currentNode = this.head
+   let currentNode = headNode.nextNode
         while(currentNode){
             if (currentNode === headNode){
                 return true 
