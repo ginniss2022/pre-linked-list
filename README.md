@@ -10,13 +10,14 @@ Use Test Driven Development to guide you. For JavaScript, run `npm install` to d
 
 ### Short Response
 **1. What are the tradeoffs between linked lists and arrays?**
-
+  -When removing  and adding elements of an array, the runtime increases linearly as the index of every number afterward has to be changed.
+  -Meanwhile this is where linkedlists rein supreme, it is much sorter for a computer to add and remove elements in a linkedlist because all it has to do is change the pointer of the last element.
 **2. What are the tradeoffs between singly linked lists and doubly linked lists?**
-
+  -
 **3. What is the run times for insertion at the head of a singly linked lists? What about deletion from the tail? What about searching and accessing some value from the singly linked list?**
-
+  
 **4. What is an abstract data type?**
-
+  -
 ### Coding Challenges
 1. Implement a `Node` class and `LinkedList` class. 
 
