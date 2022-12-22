@@ -61,7 +61,13 @@ class LinkedList {
     }
 
     length(){ 
-        //returns the length of the LinkedList as an integer value
+        let currentNode = this.head
+        let nodeCounter = 0
+        while(currentNode){
+        currentNode = currentNode.nextNode
+        nodeCounter++
+        }
+        return nodeCounter
     }
 }
 
