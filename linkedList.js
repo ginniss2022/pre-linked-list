@@ -85,12 +85,22 @@ const isCyclic = (headNode) => {
 
 // Question 3: Reverse a Linked List
 const reverse = (headNode) => { 
-    //returns the new headNode
+  let after = null
+  let current = headNode
+  let before = null
+  while(current){
+      after = current.next
+      current.next = before
+      before = current
+      current = after
+  }
+  headNode = before
+  return headNode
 };
 
 // Question 4: Merge Two Lists
 const mergeLists = (head1, head2) => { 
-    //returns the head node of the merged linked list
+    
 };
 
 // Question 5: Remove duplicates
